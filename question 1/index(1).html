@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Week Temperature</title>
+        <meta charset="windows-1151">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        
+        <table id="table" border="1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px;
+        
+        box-shadow: rgba(222, 15, 15, 0.2) 0px 2px 8px 0px;
+        
+        border-radius: 10px; ">
+            <tr style="background-color:yellowgreen ;">
+                <th>Week</th>
+                <th>Temperature </th>
+            </tr>
+            <tr>
+                <td>Sat</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Sun</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Mon</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>Tue</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Wed</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Thu</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Fri</td>
+                <td>34</td>
+            </tr>
+        </table>
+        <span id="maxV"></span><br>
+        
+        <span id="minV"></span><br>
+        <span id="sumV"></span><br>
+        <span id="avgV"></span>
+
+
+        
+        
+        <script>
+
+            
+            
+            var table = document.getElementById("table"), sumVal = 0;
+            getMax();
+            getMin();
+           
+            getSum();
+            getAvg();
+
+            
+             // Maximum value
+             function getMax()
+            {
+              var maxVal, maxIndex;
+              for(var i = 1; i < table.rows.length; i++){
+                  if(i === 1){
+                      maxVal = table.rows[i].cells[1].innerHTML;
+                      
+                      maxIndex = table.rows[i].rowIndex;
+                  }else if(maxVal < table.rows[i].cells[1].innerHTML){
+
+                      maxVal = table.rows[i].cells[1].innerHTML;
+
+                       maxIndex = table.rows[i].rowIndex;
+                  }
+              }
+              table.rows[maxIndex].cells[1].style.background = "red";
+              table.rows[maxIndex].cells[1].style.color = "white";
+              document.getElementById("maxV").innerHTML = "Maximum Value = "+maxVal;
+              document.getElementById("maxV").style.color = "red";
+               console.log("Max => "+maxVal);       
+            }
+           // Minimum value
+            function getMin()
+            {
+              var minVal, minIndex;
+              for(var i = 1; i < table.rows.length; i++){
+                  if(i === 1){
+                      minVal = table.rows[i].cells[1].innerHTML;
+                      minIndex = table.rows[i].rowIndex;
+                  }else if(minVal > table.rows[i].cells[1].innerHTML){
+                      minVal = table.rows[i].cells[1].innerHTML;
+                      minIndex = table.rows[i].rowIndex;
+                  }
+              }
+              table.rows[minIndex].cells[1].style.background = "blue";
+              table.rows[minIndex].cells[1].style.color = "white".style;
+              document.getElementById("minV").innerHTML = "Minimum Value = "+minVal;
+              document.getElementById("minV").style.color = "blue";
+               console.log("Min => "+minVal);       
+            }
+            
+
+           
+            
+            // total/sum value
+            function getSum()
+            {
+              for(var i = 1; i < table.rows.length; i++){
+                     sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+              }
+           
+            }
+            
+            // Avarage value
+            function getAvg()
+            {
+                var avg = sumVal/(table.rows.length - 1);
+                document.getElementById("avgV").innerHTML = "Average Value = "+parseInt(avg);
+                console.log("Avg => "+parseInt(avg));
+            }
+            
+        </script>
+
+        
+        
+    </body>
+</html>

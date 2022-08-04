@@ -1,0 +1,254 @@
+
+* {
+box-sizing: border-box;
+}
+body {
+
+font-family: Arial, Helvetica, sans-serif;
+
+/* background: #2B2B2B; */
+
+color: #1a1a1a;
+font-size: 15px;
+
+}
+main {
+
+ position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+width: 900px;
+
+box-shadow: rgba(222, 15, 15, 0.2) 0px 2px 8px 0px;
+
+border-radius: 10px; 
+
+}
+
+
+
+.container {
+
+display: block;
+
+padding: 30px;
+
+background: rgb(208, 102, 10);
+
+text-align: left;
+
+border-radius: 10px;
+
+}
+.container-wrapper {
+
+padding: 10px;
+
+}
+.container-wrapper:first-of-type {
+
+margin-bottom: 10px;
+
+}
+h1, h2 {
+
+text-align: center;
+
+}
+h1 {
+
+margin: 10px 0 30px;
+
+}
+label {
+
+width: 100%;
+
+}
+input,
+
+select {
+
+display: inline-block;
+
+background: #f6f3f7;
+
+width: 100%;
+
+margin: 5px 0 20px 0;
+
+padding: 15px;
+
+border: none;
+
+font-size: 15px;
+
+}
+input:focus,
+select:focus {
+background: #eeeeee;
+
+outline: none;
+
+}
+.btnReset,
+
+button {
+
+background: #0976e3;
+
+color: #fff;
+
+padding: 15px;
+
+margin: 0 0 20px;
+
+border: none;
+
+cursor: pointer;
+
+width: 100%;
+
+opacity: 0.9;
+
+font-size: 15px;
+
+outline: none;
+
+border:0;
+
+}
+.btnWrapper {
+
+display: inline-flex;
+
+margin: 0;
+
+width: 100%;
+
+}
+.btnWrapper input,
+
+.btnWrapper .btnReset,
+
+.btnWrapper .btnConvert {
+
+padding: 15px;
+
+border: none;
+
+font-size: 15px;
+
+margin: 0;
+}
+
+.btnWrapper input {
+
+width: 100%;
+
+}
+.btnReset {
+
+background: #8e0c17;
+
+}
+
+
+
+.btnReset,
+
+.btnConvert {
+
+width: 100px;
+
+text-align: center;
+
+text-decoration: none;
+
+}
+.btnSelect {
+
+background: #4EC4A2;
+
+width: 100px;
+
+}
+.btnReset:hover,
+
+button:hover {
+background: #1a1a1a;
+opacity: 1;
+
+}
+.answer {
+
+margin: 20px 0 0;
+
+width: 100%;
+
+padding: 20px;
+
+text-align: center;
+
+font-size: 30px;
+
+font-weight: bold;
+
+background: #dadada;
+
+font-family: 'Times New Roman', serif;
+
+line-height: 1.5;
+
+}
+.visibility_on {
+
+display: block;
+
+}
+.visibility_off {
+
+display: none;
+
+}
+.frmSelect {
+
+display: flex;
+
+flex-flow: row wrap;
+
+align-items: center;
+
+}
+.frmSelect select {
+
+vertical-align: middle;
+
+padding: 15px;
+
+margin: 5px 0 0;
+
+width: calc(100% - 100px);
+
+}
+.frmSelect button {
+
+margin: 5px 0 0;
+
+}
+.pieText {
+
+font-family: Serif;
+
+}
+.blueText {
+
+color:#2196f3;
+
+}
+
+
